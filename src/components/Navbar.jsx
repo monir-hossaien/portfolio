@@ -73,7 +73,7 @@ const Navbar = () => {
             {open && (
                 <div
                     className="fixed top-0 inset-0 bg-white dark:bg-gray-900 flex flex-col text-xl z-40 transition-all duration-300">
-                    <div className="absolute top-0 right-0 p-5 text-3xl">
+                    <div className="dark:text-white absolute top-0 right-0 p-5 text-3xl">
                         <button onClick={() => setOpen(false)}>
                             <IoMdClose/>
                         </button>
