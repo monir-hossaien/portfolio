@@ -58,10 +58,10 @@ const Navbar = () => {
                         {/* Button */}
                         <div className="col-span-3 flex justify-end">
                             <Button
-                                className="border border-white"
+                                className="border border-black dark:border-white dark:text-white"
                                 icon={
                                     <FaArrowRightLong
-                                        className="border border-black dark:border-white dark:bg-white rounded-full p-1 text-xl"/>
+                                        className="border border-black dark:border-white rounded-full p-1 text-xl"/>
                                 }
                                 text="Start Project"
                             />

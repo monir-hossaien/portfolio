@@ -44,7 +44,7 @@ const Hero = () => {
                         </p>
                         <div className="flex justify-center md:justify-start">
                             <Button
-                                className="py-3"
+                                className="py-3 border border-black dark:border-white dark:text-white"
                                 icon={<FaPhone className="border border-black dark:border-white rounded-full p-1 text-2xl" />}
                                 text="Schedule a Call"
                             />

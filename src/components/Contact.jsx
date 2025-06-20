@@ -15,7 +15,7 @@ const Contact = () => {
                 <div className="grid grid-cols-12 gap-6">
                     <div className="col-span-12 md:col-span-7">
                         <div className="space-y-5">
-                            <ButtonComponent text="Contact" />
+                            <ButtonComponent text="Contact" className="dark:border-white" />
                             <h1 className="font-bold text-[48px] md:text-[78px] leading-[64px] md:leading-[113px]">
                                 Interested in <br />
                                 <span className="bg-black dark:bg-white text-white dark:text-black rounded-lg px-2">work</span> together?
@@ -25,7 +25,7 @@ const Contact = () => {
                                 call where we get to know each other
                             </p>
                             <Button
-                                className="py-2 text-lg"
+                                className="py-2 text-lg border border-black dark:border-white dark:text-white"
                                 icon={
                                     <FaPhone className="border border-black dark:border-white rounded-full p-1 text-2xl" />
                                 }
