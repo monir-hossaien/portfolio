@@ -18,12 +18,11 @@ const Navbar = () => {
                     <h1 className="uppercase font-extrabold text-[34px] dark:text-white">devlop.me</h1>
                 </div>
 
-                <div className="flex justify-center items-center col-span-1 md:hidden text-right text-2xl">
-                    <DarkModeToggle/>
-                </div>
-
                 {/* Mobile Menu Icon */}
-                <div className="block col-span-5 md:hidden text-right">
+                <div className="block col-span-6 md:hidden text-right space-x-8">
+                    <div className="inline col-span-1 md:hidden text-right text-3xl">
+                        <DarkModeToggle/>
+                    </div>
                     <button
                         onClick={() => setOpen(!open)}
                         className="text-black dark:text-white text-3xl"
