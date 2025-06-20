@@ -11,7 +11,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="container px-4 md:px-0 py-3 bg-[#00000003] dark:bg-black rounded-br-[30px] rounded-bl-[30px] transition-colors duration-300 relative z-50">
+        <nav className="sticky top-0 z-[100] container px-4 md:px-0 py-3 bg-white dark:bg-black rounded-br-[30px] rounded-bl-[30px] transition-colors duration-300">
             <div className="grid grid-cols-12 items-center">
                 {/* Logo */}
                 <div className="col-span-6">
