@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom Container Width */
+.container {
+    width: 95%;
+    margin: auto;
+}
+
