@@ -1,13 +1,14 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-const Button = ({ icon, text, className }) => {
+const Button = ({ icon, text, className, path}) => {
     return (
-        <button
-            className={`${className} font-normal leading-[18px] rounded-full pr-2 py-2 flex justify-center items-center gap-1`}
+        <Link to={path}
+            className={`${className} font-semibold leading-[18px] rounded-full pr-2 py-2 flex justify-center items-center gap-1`}
         >
             <span>{icon}</span>
             <span>{text}</span>
-        </button>
+        </Link>
     );
 };
 

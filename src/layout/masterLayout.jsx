@@ -7,7 +7,9 @@ const MasterLayout = ({children}) => {
     return (
         <>
             <Navbar />
-            {children}
+            <main className="min-h-screen">
+                {children}
+            </main>
             <Footer />
         </>
     );

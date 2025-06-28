@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import Button from './Button.jsx';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { navItems } from '../constants/data.js';
@@ -11,11 +11,11 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 z-[100] container px-4 md:px-0 py-3 bg-white dark:bg-black rounded-br-[30px] rounded-bl-[30px] transition-colors duration-300">
+        <nav className="sticky top-0 z-[100] container px-4 md:px-0 py-3 bg-white  dark:bg-black rounded-br-[30px] rounded-bl-[30px] transition-colors duration-300">
             <div className="grid grid-cols-12 items-center">
                 {/* Logo */}
                 <div className="col-span-6">
-                    <h1 className="uppercase font-extrabold text-[34px] dark:text-white">devlop.me</h1>
+                    <NavLink to={"/"} className="uppercase font-extrabold text-[34px] dark:text-white">dev.monir</NavLink>
                 </div>
 
                 {/* Mobile Menu Icon */}
@@ -27,7 +27,7 @@ const Navbar = () => {
                         onClick={() => setOpen(!open)}
                         className="text-black dark:text-white text-3xl"
                     >
-                        <MdMenu/>
+                        <MdMenu className="cursor-pointer"/>
                     </button>
                 </div>
 
@@ -36,33 +36,43 @@ const Navbar = () => {
                     <div className="grid grid-cols-12 gap-4 items-center">
                         {/* Menu */}
                         <div className="col-span-8">
-                            <ul className="flex items-center gap-8 font-normal">
+                            <ul className="flex items-center gap-10 font-normal">
                                 {navItems.map((item, index) => (
                                     <li key={index}>
-                                        <Link
+                                        <NavLink
                                             to={item.path}
-                                            className="hover:text-primary text-black dark:text-white transition-colors duration-200"
+                                            className={({isActive}) =>
+                                                `
+                                                hover:text-primary dark:text-white transition-colors duration-200 relative group
+                                                ${item.label === "Start Project" ? "block md:hidden" : ""}
+                                                ${isActive && "font-semibold"}
+                                                `
+                                            }
                                         >
                                             {item.label}
-                                        </Link>
+                                            <span className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out  h-1 rounded-md"></span>
+                                        </NavLink>
                                     </li>
                                 ))}
+
                             </ul>
                         </div>
 
-                        <div className="text-2xl col-span-1 flex justify-center items-center w-full">
+                        <div className="text-2xl col-span-1 flex justify-center items-center w-full hover:scale-105 transition-all duration-300">
                             <DarkModeToggle/>
                         </div>
 
                         {/* Button */}
                         <div className="col-span-3 flex justify-end">
                             <Button
-                                className="border border-black dark:border-white dark:text-white"
+                                className="group flex items-center gap-2 cursor-pointer border border-black dark:border-white dark:text-white"
                                 icon={
                                     <FaArrowRightLong
-                                        className="border border-black dark:border-white rounded-full p-1 text-xl"/>
+                                        className="duration-800 group-hover:translate-x-24 z-10 group-hover:bg-black group-hover:text-white border border-black dark:border-white rounded-full p-1 text-xl"
+                                    />
                                 }
                                 text="Start Project"
+                                path={"/contact"}
                             />
                         </div>
                     </div>
@@ -72,22 +82,27 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {open && (
                 <div
-                    className="fixed top-0 inset-0 bg-white dark:bg-gray-900 flex flex-col text-xl z-40 transition-all duration-300">
+                    className="fixed top-0 inset-0 bg-white dark:bg-gray-900 flex flex-col text-xl z-40">
                     <div className="dark:text-white absolute top-0 right-0 p-5 text-3xl">
                         <button onClick={() => setOpen(false)}>
-                            <IoMdClose/>
+                            <IoMdClose className="cursor-pointer"/>
                         </button>
                     </div>
                     <ul className="py-18">
                         {navItems.map((item, index) => (
-                            <li key={index} className="my-5 text-center">
-                                <Link
+                            <li key={index} className="my-4 text-center">
+                                <NavLink
                                     to={item.path}
-                                    onClick={() => setOpen(false)}
-                                    className="hover:text-primary text-black dark:text-white transition-colors duration-200"
+                                    className={({isActive}) =>
+                                        `
+                                          hover:text-primary dark:text-white transition-colors duration-200 relative group
+                                          ${isActive && "font-semibold"}
+                                        `
+                                    }
                                 >
                                     {item.label}
-                                </Link>
+                                    <span className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out  h-1 rounded-md"></span>
+                                </NavLink>
                             </li>
                         ))}
                     </ul>
