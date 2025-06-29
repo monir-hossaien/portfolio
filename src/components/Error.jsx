@@ -8,12 +8,12 @@ const Error = () => {
             <section className="bg-white min-h-screen flex items-center">
                 <div className="container mx-auto flex justify-center">
                     <div className="text-center">
-                        <p className="text-4xl text-red-600">404!</p>
+                        <img width={300} src="/images/error.jpg" alt="error image"/>
                         <h1 className="mt-3 text-2xl text-gray-800">
-                            Page not found
+                            This page doesn’t exist
                         </h1>
                         <p className="mt-2 text-gray-500">
-                            The page you are looking for doesn't exist. Here are some helpful links:
+                            Please check your URL or return to home.
                         </p>
                         <div className="flex justify-center mt-4 gap-2">
                             <button className="cursor-pointer border border-gray-400 flex items-center gap-2 px-4 py-2"
