@@ -213,7 +213,7 @@ export const projects = [
     {
         id: 1,
         title: "Doctor Finder",
-        description: "A MERN-based platform for finding doctors by location, specialty, and hospital. Includes JWT authentication, admin dashboard, and appointment system.",
+        description: "A MERN-based platform to search doctors by location, specialty, and hospital. Includes secure JWT authentication, admin dashboard, and a full appointment booking system with modern UI/UX.",
         image: "/images/doctor.PNG",
         tags: ["React", "Express.js", "MongoDB", "JWT", "Tailwind"],
         github: "https://github.com/monir-hossaien/doctor-finder",
@@ -222,13 +222,14 @@ export const projects = [
     {
         id: 2,
         title: "E-commerce Shop",
-        description: "A full-featured online store built with the MERN stack. Supports user authentication, product management, shopping cart, and order tracking.",
+        description: "A full-featured MERN online store with user authentication, product management, shopping cart, order tracking, and secure payment integration using SSLCommerz. Fully responsive layout.",
         image: "/images/ecommerce.PNG",
         tags: ["React", "Express.js", "MongoDB", "SSL Commerze", "Tailwind"],
         github: "https://github.com/monir-hossaien/mern-shop",
         live: "https://monir-ecommerce-store.netlify.app"
     }
 ];
+
 
 
 

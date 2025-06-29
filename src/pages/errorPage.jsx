@@ -1,9 +1,10 @@
+import Error from "../components/Error.jsx";
 
 const ErrorPage = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            <Error />
+        </>
     );
 };
 

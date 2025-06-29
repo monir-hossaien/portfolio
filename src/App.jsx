@@ -22,7 +22,7 @@ const App = () => {
         const interval = setInterval(() => {
             setLoading(false);
             return ()=> clearInterval(interval);
-        }, 1500);
+        }, 800);
     }, [])
 
     if (loading) return <Loader />;
@@ -41,7 +41,7 @@ const App = () => {
                 <Route path="/projects" element={<ProjectPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/resume" element={<ResumePage />} />
-                <Route path="*" element={ErrorPage} />
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
     );
