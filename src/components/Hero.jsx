@@ -37,9 +37,9 @@ const Hero = () => {
 
                         {/* Icons */}
                         <div className="flex md:flex-col gap-3">
-                            <FaTwitter className="text-black dark:text-white hover:text-blue-500" />
-                            <FaInstagram className="text-black dark:text-white hover:text-pink-500" />
-                            <FaFacebook className="text-black dark:text-white hover:text-blue-700" />
+                            <FaTwitter className="text-black dark:text-white hover:text-blue-500 transition-all duration-300" />
+                            <FaInstagram className="text-black dark:text-white hover:text-pink-500 transition-all duration-300" />
+                            <FaFacebook className="text-black dark:text-white hover:text-blue-700 transition-all duration-300" />
 
                             {/* Vertical line */}
                             <div className="hidden md:block w-px h-10 bg-black dark:bg-white mt-2" />

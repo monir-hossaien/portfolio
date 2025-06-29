@@ -6,6 +6,7 @@ export const navItems = [
     { label: 'About', path: '/about' },
     { label: 'Projects', path: '/projects' },
     { label: 'Blog', path: '/blogs' },
+    { label: 'Resume', path: '/resume'},
     { label: 'Start Project', path: '/contact'},
 ];
 
@@ -131,4 +132,103 @@ export const socials = [
         }
     }
 ];
+
+
+// blog
+export const blogs = [
+    {
+        id: 1,
+        title: "Understanding the MERN Stack: A Beginner's Guide",
+        shortDes:
+            "The MERN stack is a powerful combination of technologies including MongoDB, Express.js, React, and Node.js. This guide walks you through how these tools work together to build robust full-stack applications, with examples and diagrams to make the learning process easier.",
+        image:
+            "/images/Mern Stack.png",
+        category: "Web Development",
+        date: "2025-06-25",
+    },
+    {
+        id: 2,
+        title: "What are React Server Components and Why Do They Matter?",
+        shortDes:
+            "React Server Components enable rendering on the server without sending unnecessary JavaScript to the browser. This article explores the motivation behind Server Components, their benefits for performance, and how to start using them with frameworks like Next.js.",
+        image:
+            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+        category: "React.js",
+        date: "2025-06-20",
+    },
+    {
+        id: 3,
+        title: "Why Tailwind CSS is a Game Changer for Modern UI",
+        shortDes:
+            "Tailwind CSS introduces a utility-first approach to styling, making it faster and more consistent to build responsive user interfaces. This post explains how Tailwind improves development speed, how to customize themes, and why developers love it.",
+        image:
+            "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=1200&q=80",
+        category: "CSS & Styling",
+        date: "2025-06-15",
+    },
+    {
+        id: 4,
+        title: "Deploying Your Full-Stack App on Render",
+        shortDes:
+            "Deploying full-stack applications can be intimidating, but Render makes it simple. This tutorial covers step-by-step deployment of a Node.js backend and React frontend, handling environment variables, and setting up auto-deploy from GitHub.",
+        image:
+            "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=1200&q=80",
+        category: "Deployment",
+        date: "2025-06-10",
+    },
+    {
+        id: 5,
+        title: "Securing Your Node.js APIs with JWT Authentication",
+        shortDes:
+            "Authentication is critical in modern applications. Learn how to implement JSON Web Token (JWT) based authentication in a Node.js API using Express, and protect routes with middleware to ensure secure access control.",
+        image:
+            "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1200&q=80",
+        category: "Backend",
+        date: "2025-06-05",
+    },
+    {
+        id: 6,
+        title: "React Performance Optimization: Techniques You Should Know",
+        shortDes:
+            "React performance issues can occur as your application grows. This post discusses effective techniques like memoization, lazy loading, code splitting, and virtualization to boost your React app's speed and efficiency.",
+        image:
+            "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80",
+        category: "React.js",
+        date: "2025-06-01",
+    },
+    {
+        id: 7,
+        title: "Simplify State Management in React with Zustand",
+        shortDes:
+            "Zustand offers a simple yet powerful alternative to Redux and Context API for state management. This article covers the basics of Zustand, creating global state stores, and integrating it seamlessly in your component tree.",
+        image:
+            "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80",
+        category: "React.js",
+        date: "2025-05-28",
+    },
+];
+
+//projects
+export const projects = [
+    {
+        id: 1,
+        title: "Doctor Finder",
+        description: "A MERN-based platform for finding doctors by location, specialty, and hospital. Includes JWT authentication, admin dashboard, and appointment system.",
+        image: "/images/doctor.PNG",
+        tags: ["React", "Express.js", "MongoDB", "JWT", "Tailwind"],
+        github: "https://github.com/monir-hossaien/doctor-finder",
+        live: "https://care-hop-service.vercel.app"
+    },
+    {
+        id: 2,
+        title: "E-commerce Shop",
+        description: "A full-featured online store built with the MERN stack. Supports user authentication, product management, shopping cart, and order tracking.",
+        image: "/images/ecommerce.PNG",
+        tags: ["React", "Express.js", "MongoDB", "SSL Commerze", "Tailwind"],
+        github: "https://github.com/monir-hossaien/mern-shop",
+        live: "https://monir-ecommerce-store.netlify.app"
+    }
+];
+
+
 
