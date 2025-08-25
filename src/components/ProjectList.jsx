@@ -31,7 +31,7 @@ const ProjectList = () => {
                     className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
                     {projects.map(({ id, title, description, image, tags, github, live }) => (
                         <div key={id}>
-                            <CardEffect key={id} className="rounded-[22px] max-w-sm bg-white dark:bg-zinc-900 w-full">
+                            <CardEffect key={id} className="rounded-[22px] w-full sm:max-w-sm bg-white dark:bg-zinc-900">
                                 <img
                                     src={image}
                                     alt={title}
