@@ -31,13 +31,13 @@ const ProjectList = () => {
                     className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
                     {projects.map(({ id, title, description, image, tags, github, live }) => (
                         <div key={id}>
-                            <CardEffect key={id} className="rounded-[22px] max-w-sm bg-white dark:bg-zinc-900">
+                            <CardEffect key={id} className="rounded-[22px] max-w-sm bg-white dark:bg-zinc-900 w-full">
                                 <img
                                     src={image}
                                     alt={title}
                                     className="w-full h-[200px] object-cover rounded-2xl rounded-b-none"
                                 />
-                                <div className="px-6 py-3">
+                                <div className="px-6 py-3 w-full">
                                     <h3 className="text-lg font-semibold mt-4 text-black dark:text-white">{title}</h3>
                                     <p className="text-sm mt-2 text-gray-600 dark:text-gray-400">{description}</p>
 
@@ -47,7 +47,7 @@ const ProjectList = () => {
                                                 key={i}
                                                 className="text-xs bg-gray-200 dark:bg-zinc-700 px-2 py-0.5 rounded-full text-gray-800 dark:text-gray-100"
                                             >
-                                            #{tag}
+                                            {tag}
                                         </span>
                                         ))}
                                     </div>

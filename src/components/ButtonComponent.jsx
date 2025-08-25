@@ -9,7 +9,7 @@ const ButtonComponent = ({text, className}) => {
             whileInView={{opacity: 1, y:0}}
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="flex items-center">
-            <FaArrowDown className={`${className} border border-black rounded-full p-1 text-3xl`} />
+            <FaArrowDown className={`${className} border border-black dark:border-white rounded-full p-1 text-3xl`} />
             <button
                 className={`${className} font-normal leading-[18px] border rounded-full px-4 py-1.5 flex justify-center items-center`}>
                 {text}</button>

@@ -29,7 +29,7 @@ const About = () => {
                     whileInView={{opacity: 1, x:0}}
                     transition={{ duration: 0.6, ease: "easeInOut" }}
 
-                    className="text-center font-normal text-base md:text-lg leading-[30px] md:leading-[33px] py-10 dark:text-black">
+                    className="text-center font-normal text-base md:text-lg leading-[30px] md:leading-[33px] py-10 dark:text-white">
                     I start every new client interaction with an in-depth discovery call where
                     we get <br className="hidden md:block" /> to know each other and recommend the best course of action.
                 </motion.p>
