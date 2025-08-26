@@ -8,7 +8,7 @@ import { Github, ExternalLink } from "lucide-react";
 const ProjectList = () => {
     return (
         <section className="py-12 bg-white dark:bg-gray-900">
-            <div className="container">
+            <div className="container px-4 md:px-0">
                 <div className="mb-10">
                     <ButtonComponent
                         text="Recent Projects"

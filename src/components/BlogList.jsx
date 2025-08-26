@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const BlogList = () => {
     return (
         <section className="py-12 bg-white dark:bg-gray-900">
-            <div className="container">
+            <div className="container px-4 md:px-0">
                 {/* Header */}
                 <div className="mb-10">
                     <ButtonComponent
