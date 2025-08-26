@@ -29,7 +29,7 @@ const BlogList = () => {
                     {blogs.map(({ id, title, shortDes, image, category, date }) => (
                         <CardEffect
                             key={id}
-                            className="rounded-[22px] max-w-sm p-4 sm:p-6 bg-white dark:bg-zinc-900"
+                            className="rounded-[22px] w-full sm:max-w-sm p-4 sm:p-6 bg-white dark:bg-zinc-900"
                         >
                             <img
                                 src={image}

@@ -225,7 +225,7 @@ export const projects = [
         description: "A full-featured MERN online store with user authentication, product management, shopping cart, order tracking, and secure payment integration using SSLCommerz. Fully responsive layout.",
         image: "/images/ecommerce.PNG",
         tags: ["React", "Express.js", "MongoDB", "SSL Commerze", "Tailwind", "Zustand"],
-        github: "https://github.com/monir-hossaien/mern-shop",
+        github: "https://github.com/monir-hossaien/mern-ecommerce",
         live: "https://monir-ecommerce-store.netlify.app"
     }
 ];
