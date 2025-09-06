@@ -220,6 +220,16 @@ export const projects = [
         live: "https://care-hop-service.vercel.app"
     },
     {
+        id: 3,
+        title: "AI Code Explanation Tool",
+        description: "An AI-powered code explainer built with React and Tailwind. Supports Markdown rendering, syntax highlighting via Prism, one-click copy, and a clean UI for developers to understand.",
+        image: "/images/code.png",
+        tags: ["React", "Tailwind", "AI Model", "React Markdown", "Prism", "Lucide", "Express Js"],
+        github: "https://github.com/monir-hossaien/code-explain-AI",
+        live: "https://code-explanation.vercel.app"
+    },
+
+    {
         id: 2,
         title: "E-commerce Shop",
         description: "A full-featured MERN online store with user authentication, product management, shopping cart, order tracking, and secure payment integration using SSLCommerz. Fully responsive layout.",
