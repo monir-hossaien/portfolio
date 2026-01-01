@@ -212,6 +212,15 @@ export const blogs = [
 export const projects = [
     {
         id: 1,
+        title: "Raangalay",
+        description: "A premium e-commerce platform specializing in traditional and lifestyle products. Developed the high-performance frontend using Next.js, focusing on a seamless user experience, responsive product galleries, and optimized page speed.",
+        image: "/images/raangalay.PNG",
+        tags: ["Next.js", "Shadcn UI", "Tailwind CSS", "TypeScript", "Lucide Icons", "Framer Motion"],
+        github: "https://github.com/monir-hossaien/raangalay-frontend", // Verify your repo name
+        live: "https://raangalay.com"
+    },
+    {
+        id: 2,
         title: "Doctor Finder",
         description: "A MERN-based platform to search doctors by location, specialty, and hospital. Includes secure JWT authentication, admin dashboard, and a full appointment booking system with modern UI/UX.",
         image: "/images/doctor.PNG",
@@ -228,16 +237,6 @@ export const projects = [
         github: "https://github.com/monir-hossaien/code-explain-AI",
         live: "https://code-explanation.vercel.app"
     },
-
-    {
-        id: 2,
-        title: "E-commerce Shop",
-        description: "A full-featured MERN online store with user authentication, product management, shopping cart, order tracking, and secure payment integration using SSLCommerz. Fully responsive layout.",
-        image: "/images/ecommerce.PNG",
-        tags: ["React", "Express.js", "MongoDB", "SSL Commerze", "Tailwind", "Zustand"],
-        github: "https://github.com/monir-hossaien/mern-ecommerce",
-        live: "https://monir-ecommerce-store.netlify.app"
-    }
 ];
 
 
