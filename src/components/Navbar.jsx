@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import Button from './Button.jsx';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { navItems } from '../constants/data.js';
@@ -40,24 +40,40 @@ const Navbar = () => {
                             {/* Menu */}
                             <div className="col-span-8">
                                 <ul className="flex items-center gap-10 font-normal">
-                                    {navItems.map((item, index) => (
-                                        <li key={index}>
-                                            <NavLink
-                                                to={item.path}
-                                                className={({isActive}) =>
-                                                    `
-                                                hover:text-primary dark:text-white transition-colors duration-200 relative group
-                                                ${item.label === "Start Project" ? "block md:hidden" : ""}
-                                                ${isActive && "font-semibold"}
-                                                `
-                                                }
-                                            >
-                                                {item.label}
-                                                <span
-                                                    className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out  h-1 rounded-md"></span>
-                                            </NavLink>
-                                        </li>
-                                    ))}
+                                    {navItems.map((item, index) => {
+                                        const isResume = item.label === "Resume";
+
+                                        // Common classes to keep your design consistent
+                                        const commonStyles = `hover:text-primary dark:text-white transition-colors duration-200 relative group ${
+                                            item.label === "Start Project" ? "block md:hidden" : ""
+                                        }`;
+
+                                        return (
+                                            <li key={index}>
+                                                {isResume ? (
+                                                    <a
+                                                        href={item.path}
+                                                        download="Monir_Hossain.pdf"
+                                                        className={commonStyles}
+                                                    >
+                                                        {item.label}
+                                                        <span className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out h-1 rounded-md"></span>
+                                                    </a>
+                                                ) : (
+                                                    /* Existing NavLink for internal routing */
+                                                    <NavLink
+                                                        to={item.path}
+                                                        className={({ isActive }) =>
+                                                            `${commonStyles} ${isActive ? "font-semibold" : ""}`
+                                                        }
+                                                    >
+                                                        {item.label}
+                                                        <span className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out h-1 rounded-md"></span>
+                                                    </NavLink>
+                                                )}
+                                            </li>
+                                        );
+                                    })}
 
                                 </ul>
                             </div>
@@ -98,23 +114,38 @@ const Navbar = () => {
                             </button>
                         </div>
                         <ul className="py-18">
-                            {navItems.map((item, index) => (
-                                <li key={index} className="my-4 text-center">
-                                    <NavLink
-                                        to={item.path}
-                                        className={({isActive}) =>
-                                            `
-                                          hover:text-primary dark:text-white transition-colors duration-200 relative group
-                                          ${isActive && "font-semibold"}
-                                        `
-                                        }
-                                    >
-                                        {item.label}
-                                        <span
-                                            className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out  h-1 rounded-md"></span>
-                                    </NavLink>
-                                </li>
-                            ))}
+                            {navItems.map((item, index) => {
+                                const isResume = item.label === "Resume";
+
+                                const commonStyles = ({ isActive }) => `
+        hover:text-primary dark:text-white transition-colors duration-200 relative group
+        ${isActive ? "font-semibold text-primary" : ""}
+    `;
+
+                                return (
+                                    <li key={index} className="my-4 text-center">
+                                        {isResume ? (
+                                            <a
+                                                href={item.path}
+                                                download="Monir_Hossain.pdf"
+                                                className="hover:text-primary dark:text-white transition-colors duration-200 relative group"
+                                            >
+                                                {item.label}
+                                                <span className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out h-1 rounded-md"></span>
+                                            </a>
+                                        ) : (
+
+                                            <NavLink
+                                                to={item.path}
+                                                className={commonStyles}
+                                            >
+                                                {item.label}
+                                                <span className="absolute left-0 -bottom-1.5 bg-gradient-to-r from-teal-300 to-lime-500 w-0 group-hover:w-[80%] transition-all duration-300 ease-in-out h-1 rounded-md"></span>
+                                            </NavLink>
+                                        )}
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </div>
                 )}

@@ -10,7 +10,6 @@ import ScrollToTop from "react-scroll-to-top";
 import {ScrollToTopNavigation} from "./helpers/helper.js";
 import {useEffect, useState} from "react";
 import Loader from "./components/Loader.jsx";
-import ResumePage from "./pages/resumePage.jsx";
 
 
 const App = () => {
@@ -40,7 +39,6 @@ const App = () => {
                 <Route path="/blogs" element={<BlogPage />} />
                 <Route path="/projects" element={<ProjectPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/resume" element={<ResumePage />} />
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>

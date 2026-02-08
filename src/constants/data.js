@@ -6,7 +6,7 @@ export const navItems = [
     { label: 'About', path: '/about' },
     { label: 'Projects', path: '/projects' },
     { label: 'Blog', path: '/blogs' },
-    { label: 'Resume', path: '/resume'},
+    { label: 'Resume', path: '/cv/Monir_Hossain.pdf', download: true},
     { label: 'Start Project', path: '/contact'},
 ];
 
