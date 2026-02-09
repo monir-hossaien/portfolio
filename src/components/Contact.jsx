@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 
 const Contact = () => {
     return (
-        <div className="py-20 relative overflow-hidden dark:bg-gray-900 text-black dark:text-white">
+        <div className="min-h-screen relative overflow-hidden dark:bg-gray-900 text-black dark:text-white flex justify-center items-center">
             <div className="absolute bottom-0 -z-10 w-full">
                 <img src="/images/bg-gradiant3.svg" alt="gradiant-image" className="w-full" />
             </div>
